@@ -35,16 +35,16 @@ The main benefit of the snowflake schema it uses smaller disk space.
 Easier to implement a dimension is added to the Schema
 Due to multiple tables query performance is reduced
 The primary challenge that you will face while using the snowflake Schema is that you need to perform more maintenance efforts because of the more lookup tables.
-## Star Schema	| ## Snow Flake Schema
+## Star Schema	| Snow Flake Schema
 Hierarchies for the dimensions are stored in the dimensional table | Hierarchies are divided into separate tables.
 It contains a fact table surrounded by dimension tables            | One fact table surrounded by dimension table which are in turn surrounded by dimension table
 In a star schema, only single join creates the relationship between the fact table and any dimension tables | A snowflake schema requires many joins to fetch the data.
-Simple DB Design.	Very Complex DB Design.
-Denormalized Data structure and query also run faster.	Normalized Data Structure.
-High level of Data redundancy	Very low-level data redundancy
-Single Dimension table contains aggregated data.	Data Split into different Dimension Tables.
-Cube processing is faster.	Cube processing might be slow because of the complex join.
-Offers higher performing queries using Star Join Query Optimization. Tables may be connected with multiple dimensions.	The Snow Flake Schema is represented by centralized fact table which unlikely connected with multiple dimensions.
+Simple DB Design   |  Very Complex DB Design.
+Denormalized Data structure and query also run faster |  Normalized Data Structure.
+High level of Data redundancy	 | Very low-level data redundancy
+Single Dimension table contains aggregated data  | Data Split into different Dimension Tables.
+Cube processing is faster  |  Cube processing might be slow because of the complex join.
+Offers higher performing queries using Star Join Query Optimization. Tables may be connected with multiple dimension   |  The Snow Flake Schema is represented by centralized fact table which unlikely connected with multiple dimensions.
 ## What is a Galaxy schema?
 A GALAXY SCHEMA contains two fact table that share dimension tables between them. It is also called Fact Constellation Schema. The schema is viewed as a collection of stars hence the name Galaxy Schema.
 
